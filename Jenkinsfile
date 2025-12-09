@@ -1,1 +1,10 @@
-pipeline { agent any; stages { stage('Build') { steps { echo 'Starting Jenkins Build...' } } } }
+pipeline {
+ agent { label 'master' }
+ stages {
+ stage('Test') {
+ steps {
+ echo "Pipeline plugin is working!"
+ }
+ }
+ }
+}
