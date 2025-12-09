@@ -1,10 +1,10 @@
 pipeline {
- agent { label 'master' }
+ agent any
  stages {
- stage('Test') {
- steps {
- echo "Pipeline plugin is working!"
- }
- }
+  stage('Test') {
+   steps {
+    echo "Pipeline plugin is working!"
+   }
+  }
  }
 }
